@@ -20,9 +20,10 @@ typedef unsigned int uint32_t;
 #define BIT_CHECK(reg,n) (((reg)&(1U<<(n)))!=0)
 
 //手写字符串
-void my_strcpy(char* dst,char* src);
+void my_strcpy(char* dst,const char* src);
 int my_strcmp(const char* a,const char* b);
 
 //空指针效验宏
-#define CHECK_PTR(p)do{if((p)==NULL){LOG("null pointer");return;}}while(0);
+#define CHECK_PTR_RET(p)do{if((p)==NULL){LOG("null pointer");return -1;}}while(0);
+#define CHECK_PTR_VOID(p)do{if((p)==NULL){LOG("null pointer");return;}}while(0);
 #endif

@@ -1,9 +1,9 @@
 #include "utils.h"
 
-void my_strcpy(char* dst,char* scr)
+void my_strcpy(char* dst,const char* scr)
 {
-    CHECK_PTR(dst);
-    CHECK_PTR(scr);
+    CHECK_PTR_VOID(dst);
+    CHECK_PTR_VOID(scr);
     while(*scr!='\n')
     {
         *dst=*scr;
@@ -15,8 +15,8 @@ void my_strcpy(char* dst,char* scr)
 
 int my_strcmp(const char* a,const char* b)
 {
-    CHECK_PTR(a);
-    CHECK_PTR(b);
+    CHECK_PTR_RET(a);
+    CHECK_PTR_RET(b);
     while(*a!='\0'&&*b!='\0'&&(*a==*b))
     {
         a++;

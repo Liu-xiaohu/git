@@ -18,6 +18,6 @@ extern SensorData g_sensor_list[SENSOR_CNT];
 void Sensor_Init(SensorData* dev,const char* id);
 void Sensor_Read(SensorData* dev);
 void Sensor_Print(const SensorData* dev);
-void Sensor_PrintAll(SensorData* devs[],int count);
+void Sensor_PrintAll(SensorData devs[],int count);
 
 #endif
